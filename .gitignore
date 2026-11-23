@@ -1,0 +1,36 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.venv*/
+
+# ---- 构建产物 ----
+build/
+dist/
+*.egg-info/
+src/*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---- 测试与工具缓存 ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- 运行时产物（建模产物落 CSV 同目录 mdl-*，这里兜住误落工作区的临时物）----
+*.log
+*.tmp
+.risklab-writecheck-*
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

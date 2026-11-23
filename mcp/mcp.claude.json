@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "risklab-mdl": {
+      "command": "python",
+      "args": ["-m", "risklab_mdl"],
+      "env": {}
+    }
+  }
+}
