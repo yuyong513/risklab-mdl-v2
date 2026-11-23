@@ -100,10 +100,13 @@ dataset_columns(project_dir="D:/work/mdl-my_data")
 ## 验证
 
 ```powershell
-python -m pytest tests -q                       # 全量：536 passed（15 subtests），约 7–9 分钟
+python -m pytest tests -q                       # 全量：本机 536 passed（15 subtests），约 7–9 分钟
 python -m pytest tests/test_e2e_sample.py -q    # 快速 e2e：合成数据全链路，约 7 秒
 python scripts\check_layout.py "<project_dir>"  # 产物树契约校验（完整流程后）
 ```
+
+> 依赖外部示例宽表的用例在样例缺失时会自动 skip，因此公开克隆下的通过数会略少；
+> 其余用例与工具行为不受影响。
 
 测试覆盖：core 纯计算、数据/特征/预处理/模型工具契约、三态协议、manifest 并发、
 stdio 握手、skill 契约与静态红线（无 `fcntl`、无旧包名）。
